@@ -1,6 +1,7 @@
 
 import { createTheme , responsiveFontSizes} from '@mui/material/styles';
 
+// const [darkmode, setDarkmode] = useState(false);
 
 let theme = createTheme({
     palette: {
@@ -22,7 +23,7 @@ let theme = createTheme({
       // two indexes within its tonal palette.
       // E.g., shift from Red 500 to Red 300 or Red 700.
       tonalOffset: 0.2,
-    //   mode: darkmode ? "dark" : "light",
+      // mode: darkmode ? "dark" : "light",
     },
     typography: {
       fontFamily: "Lexend",
