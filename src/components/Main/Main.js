@@ -14,6 +14,8 @@ import animationDataHand from "../../lotties/hand.json";
 import Cta from "../Cta/Cta";
 import Skills from "../Skills/Skills";
 import Experience from "../Experience/Stepper";
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -26,7 +28,6 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  border: "1px solid",
   height: "100vh",
 };
 
@@ -48,46 +49,52 @@ export default function BasicGrid() {
             {/* <Typography variant="h5" gutterBottom component="div">
             <Lottie options={defaultOptions} style={{flex: 1 , width: "76px", height: "77px", border: "1px solid"}}/>
           </Typography> */}
+            <div style={{ marginTop: 120 }}>
+              <Typography variant="h5" gutterBottom component="div">
+                {/* <Lottie options={defaultOptions} style={{flex: 1 , width: "76px", height: "77px", border: "1px solid"}}/> */}
+                Greetings!
+              </Typography>
 
-            <Typography variant="h5" gutterBottom component="div">
-              {/* <Lottie options={defaultOptions} style={{flex: 1 , width: "76px", height: "77px", border: "1px solid"}}/> */}
-              Greetings!
-            </Typography>
-
-            <Typography variant="h5" gutterBottom component="div">
-              I am{" "}
-              <font style={{ color: "#2962FF" }}>Mohammed Adil Ehsan,</font> the
-              guy who does bug free
-            </Typography>
-            <Typography variant="h3" gutterBottom component="div">
-              Full Stack Development
-            </Typography>
-            <Card sx={{ maxWidth: "572px" }} elevation="0">
-              <CardContent>
-                <Typography variant="h6">
-                  Experienced in all phases of product development from
-                  Planning, Requirement Gathering, Implementing & Testing.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  style={{ textTransform: "capitalize" }}
-                >
-                  Check out my works
-                </Button>
-                <Button
-                  variant="text"
-                  style={{ textTransform: "capitalize", marginLeft: 20 }}
-                >
-                  Let’s Connect
-                </Button>
-              </CardActions>
-            </Card>
+              <Typography variant="h5" gutterBottom component="div">
+                I am{" "}
+                <font style={{ color: "#2962FF" }}>Mohammed Adil Ehsan,</font>{" "}
+                the guy who does bug free
+              </Typography>
+              <Typography variant="h3" gutterBottom component="div">
+                Full Stack Development
+              </Typography>
+              <Card sx={{ maxWidth: "572px" }} elevation="0">
+                <CardContent>
+                  <Typography variant="h6">
+                    Experienced in all phases of product development from
+                    Planning, Requirement Gathering, Implementing & Testing.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{ textTransform: "capitalize" }}
+                    size="large"
+                  >
+                    Check out my works
+                  </Button>
+                  <Button
+                    variant="text"
+                    style={{ textTransform: "capitalize", marginLeft: 20 }}
+                    size="large"
+                  >
+                    Let’s Connect
+                  </Button>
+                </CardActions>
+              </Card>
+            </div>
           </Grid>
           <Grid item xs={4}>
-            <img src="/Image.png" style={{ maxWidth: "100%" }} />
+            <img
+              src="/Image.png"
+              style={{ width: "100%", paddingBottom: "50px" }}
+            />
           </Grid>
         </Grid>
       </section>
@@ -95,9 +102,22 @@ export default function BasicGrid() {
       <section style={style}>
         <Grid container spacing={2}>
           <Skills />
+        </Grid>
+      </section>
+
+      <section style={style}>
+        <Grid container spacing={2}>
           <Experience />
         </Grid>
       </section>
+
+      <section style={style}>
+        <Grid container spacing={2}>
+          <Contact />
+        </Grid>
+      </section>
+
+      <Footer />
     </>
   );
 }

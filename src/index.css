@@ -2,10 +2,7 @@ body {
   font-family: 'Lexend', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  padding: 0;
   height: 100%;
-  margin: 0;
 }
 
 code {
