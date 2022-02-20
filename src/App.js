@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Header from "./components/Header/Header";
+import NewHeader from "./components/Header/NewHeader";
 import Main from "./components/Main/Main";
 import CssBaseline from "@mui/material/CssBaseline";
 import {
@@ -11,6 +12,7 @@ import {
   responsiveFontSizes,
   ThemeProvider,
 } from "@mui/material/styles";
+import Footer from "./components/Footer/Footer";
 
 function Copyright() {
   return (
@@ -61,12 +63,14 @@ export default function App() {
     <ThemeProvider theme={theme}>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
+      <NewHeader mode={darkmode} setmode={setmode} />
       <Container maxWidth="xl">
         <Box sx={{ my: 4 }}>
-          <Header mode={darkmode} setmode={setmode} />
+          {/* <Header mode={darkmode} setmode={setmode} /> */}
           <Main />
         </Box>
       </Container>
+      <Footer/>
     </ThemeProvider>
   );
 }

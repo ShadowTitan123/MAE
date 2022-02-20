@@ -16,12 +16,13 @@ export default function BasicGrid() {
   return (
     <>
       <Grid
+
         container
         spacing={2}
         direction="row"
         justifyContent="center"
         alignItems="center"
-        style={{ height: "352px", backgroundImage: `url(/tech/Bg/Bg.png)` }}
+        style={{ height: "352px", backgroundImage: `url(/tech/Bg/Bg.png)`, border: "1px solid"}}
       >
         <Grid
           item
@@ -54,6 +55,7 @@ export default function BasicGrid() {
           justifyContent: "space-between",
           backgroundColor: "#2962FF",
           color: "white",
+          minWidth : "100px",
         }}
       >
         <h3 style={{ paddingLeft: 10 }}> Designed by Aaqil Jamal </h3>

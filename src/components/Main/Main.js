@@ -15,7 +15,7 @@ import Cta from "../Cta/Cta";
 import Skills from "../Skills/Skills";
 import Experience from "../Experience/Stepper";
 import Contact from "../Contact/Contact";
-import Footer from "../Footer/Footer";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -116,8 +116,6 @@ export default function BasicGrid() {
           <Contact />
         </Grid>
       </section>
-
-      <Footer />
     </>
   );
 }
