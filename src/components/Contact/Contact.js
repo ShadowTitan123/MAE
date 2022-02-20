@@ -22,7 +22,7 @@ export default function Contact() {
       autoComplete="off"
     >
       <Grid container spacing={2}>
-        <Grid item xs={6} style={{ display: "flex", flexDirection: "column" }}>
+        <Grid item xs={12} lg={6} style={{ display: "flex", flexDirection: "column" }}>
           <Typography variant="h3" style={{ marginBottom: 15 }}>
             Let's Connect
           </Typography>
@@ -55,7 +55,9 @@ export default function Contact() {
             Send
           </Button>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6}  sx={{
+              display: { xs: "none", md: "none", lg :"block" },
+            }}>
           <img width="490px" height="490px" src="/tech/code.png" />
         </Grid>
       </Grid>

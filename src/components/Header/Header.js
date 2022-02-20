@@ -19,7 +19,7 @@ const pages = ["Home", "Skills", "Projects", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = ({ mode, setmode }) => {
-  const [isDarkMode, setIsDarkMode] = useState(mode);
+  const [isDarkMode, setIsDarkMode] = React.useState(mode);
 
   const handlechange = () => {
     setIsDarkMode(!isDarkMode);

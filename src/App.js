@@ -13,6 +13,8 @@ import {
   ThemeProvider,
 } from "@mui/material/styles";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
+
 
 function Copyright() {
   return (
@@ -65,6 +67,7 @@ export default function App() {
       <CssBaseline />
       <NewHeader mode={darkmode} setmode={setmode} />
       <Container maxWidth="xl">
+      <ScrollToTop smooth color="#2962FF" />
         <Box sx={{ my: 4 }}>
           {/* <Header mode={darkmode} setmode={setmode} /> */}
           <Main />

@@ -1,5 +1,6 @@
 
 import { createTheme , responsiveFontSizes} from '@mui/material/styles';
+import darkScrollbar from '@mui/material/darkScrollbar';
 
 // const [darkmode, setDarkmode] = useState(false);
 
@@ -28,6 +29,13 @@ let theme = createTheme({
     typography: {
       fontFamily: "Lexend",
     },
+    components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: theme.palette.mode === 'dark' ? darkScrollbar() : null,
+      },
+    },
+  },
   });
   theme = responsiveFontSizes(theme);
 

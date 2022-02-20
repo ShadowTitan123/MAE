@@ -11,31 +11,34 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const pages = ["Home", "Skills", "Project", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({ mode, setmode }) => {
+  const [isDarkMode, setIsDarkMode] = React.useState(mode);
+
+  const handlechange = () => {
+    setIsDarkMode(!isDarkMode);
+    setmode();
+  };
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="fixed" color="inherit">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -102,7 +105,7 @@ const ResponsiveAppBar = () => {
               flexGrow: 0.5,
               display: { xs: "none", md: "flex" },
               justifyContent: "space-between",
-              marginRight : 3
+              marginRight: 3,
             }}
           >
             {pages.map((page) => (
@@ -122,37 +125,35 @@ const ResponsiveAppBar = () => {
               justifyContent: "space-between",
             }}
           >
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, display: "block" }}
-            >
-              {" "}
-              Github {" "}
-            </Button>
+            <IconButton sx={{ my: 2, display: "block" }} >
+              <GitHubIcon fontSize="large" />
+            </IconButton>
+
+            <IconButton sx={{ my: 2, display: "block" }}>
+              <LinkedInIcon fontSize="large" />
+            </IconButton>
 
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, display: "block" }}
+              variant="outlined"
             >
-              {" "}
-              Linkedin {" "}
+              Download
             </Button>
 
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, display: "block" }}
-            >
-              {" "}
-              Download{" "}
-            </Button>
-
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, display: "block" }}
-            >
-              {" "}
-              Mode{" "}
-            </Button>
+            {isDarkMode ? (
+              <IconButton
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, display: "block" }}
+              >
+                {" "}
+                <Brightness7Icon color="primary" onClick={handlechange} />
+              </IconButton>
+            ) : (
+              <IconButton sx={{ my: 2, display: "block" }}>
+                <Brightness4Icon color="primary" onClick={handlechange}  />
+              </IconButton>
+            )}
           </Box>
         </Toolbar>
       </Container>

@@ -7,7 +7,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import RecommendIcon from "@mui/icons-material/Recommend";
 import FrontendSkills from "./FrontendSkills";
 
 function TabPanel(props) {
